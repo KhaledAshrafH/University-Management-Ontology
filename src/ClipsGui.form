@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ClipsGui">
+  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="21" y="20" width="767" height="307"/>
+    </constraints>
+    <properties>
+      <font name="Lucida Sans Typewriter" size="18" style="3"/>
+      <inheritsPopupMenu value="false"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="5b56e" class="javax.swing.JCheckBox" binding="B1">
+        <constraints>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Question 1"/>
+        </properties>
+      </component>
+      <component id="f9156" class="javax.swing.JCheckBox" binding="B3">
+        <constraints>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Question 3"/>
+        </properties>
+      </component>
+      <component id="fd08d" class="javax.swing.JCheckBox" binding="B5">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Question 5"/>
+        </properties>
+      </component>
+      <component id="f6ecd" class="javax.swing.JCheckBox" binding="B2">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Question 2"/>
+        </properties>
+      </component>
+      <component id="15d81" class="javax.swing.JCheckBox" binding="B4">
+        <constraints>
+          <grid row="2" column="0" row-span="4" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Question 4"/>
+        </properties>
+      </component>
+      <component id="a37fc" class="javax.swing.JButton" binding="Run">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="16" style="1"/>
+          <text value="Run"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

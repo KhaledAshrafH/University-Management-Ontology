@@ -1,0 +1,32 @@
+PREFIX uri: <http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#>
+
+query Q1
+SELECT ?name ?TA ?Department
+	WHERE { ?TA uri:belonging_to ?Department.
+		?Department uri:department_code "CS"^^xsd:string.
+		?TA uri:name ?name.}
+
+query Q2
+SELECT  ?name ?course
+	WHERE { ?student uri:is_studying ?course.
+		 ?student uri:name "Ahmed"^^xsd:string.
+			?course uri:name ?name}
+
+query Q3
+SELECT   ?name ?course
+	WHERE {?course uri:offered_by ?faculty.
+		?faculty uri:name "Computer Science"^^xsd:string.
+			?course uri:name ?name}
+
+query Q4
+SELECT ?name ?lecturer
+	WHERE {?lecturer uri:lecturers_of_faculty ?faculty.
+		?faculty uri:name "Computer Science"^^xsd:string.
+		?lecturer uri:name ?name}
+		
+
+query Q5
+SELECT  ?name ?faculty
+	WHERE {?faculty uri:faculties_of_university ?university.
+		?university uri:name "Cairo University"^^xsd:string.
+		?faculty uri:name ?name}

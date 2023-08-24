@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#"
+     xml:base="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#belonging_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#belonging_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#faculties_of_university -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#faculties_of_university">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#is_studying -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#is_studying">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#lecturers_of_faculty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#lecturers_of_faculty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#offered_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#offered_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#offers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#offers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#offers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#course_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#course_code">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code"/>
+                        <owl:hasValue>AI</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code"/>
+                        <owl:hasValue>CS</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code"/>
+                        <owl:hasValue>DS</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code"/>
+                        <owl:hasValue>IS</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#department_code"/>
+                        <owl:hasValue>IT</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#grade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#grade">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#grade"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#grade"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#student_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#student_id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course_work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course_work">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Exams -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Exams">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lab_room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lab_room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecture_hall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecture_hall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Program -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Program">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Thesis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Thesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#academic_staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#academic_staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <offered_by rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1"/>
+        <course_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS123</course_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OOP</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <offered_by rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1"/>
+        <course_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS112</course_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithms</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <offered_by rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1"/>
+        <course_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS113</course_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c++</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <offered_by rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F3"/>
+        <course_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS321</course_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataBase</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Course"/>
+        <offered_by rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F3"/>
+        <course_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS521</course_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Math3</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department"/>
+        <department_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS</department_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Department"/>
+        <department_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</department_code>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information technology</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+        <faculties_of_university rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U1"/>
+        <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giza</location>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+        <faculties_of_university rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U2"/>
+        <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giza</location>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calture faculty</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Faculty"/>
+        <faculties_of_university rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U1"/>
+        <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giza</location>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engennering faculty</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer"/>
+        <lecturers_of_faculty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr:Abir</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer"/>
+        <lecturers_of_faculty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr:Amin</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#L3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Lecturer"/>
+        <lecturers_of_faculty rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#F3"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr:Manar</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C1"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C2"/>
+        <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.22</grade>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C3"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C4"/>
+        <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.45</grade>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khaled</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#S3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#Student"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C1"/>
+        <is_studying rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#C5"/>
+        <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.7</grade>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manar</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA"/>
+        <belonging_to rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed Sayed</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA"/>
+        <belonging_to rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samah</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA"/>
+        <belonging_to rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aya</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#TA"/>
+        <belonging_to rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#D1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khaled Ashraf</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cairo University</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#U2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/midos/ontologies/2022/11/untitled-ontology-14#University"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helwan University</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
